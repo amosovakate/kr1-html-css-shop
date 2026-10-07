@@ -191,10 +191,7 @@ a:focus-visible {
 }
 
 
-/*
-  Модальное окно.
-  Элемент dialog сам умеет открываться поверх страницы.
-*/
+
 /* ===============================
    5. Форма и модальное окно
    =============================== */
@@ -266,3 +263,37 @@ a:focus-visible {
   background-color: var(--color-success-bg);
 }
 
+
+/* ===============================
+   6. Хлебные крошки
+   =============================== */
+
+.breadcrumbs {
+  max-width: var(--container-width);
+  margin: 0 auto var(--space-md);
+  font-size: 14px;
+  color: var(--color-muted);
+}
+
+.breadcrumbs a {
+  color: var(--color-primary);
+}
+
+.breadcrumbs span::before {
+  content: " / ";
+  color: var(--color-muted);
+}
+
+/* ===============================
+   7. Плавная навигация
+   =============================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+:target {
+  outline: 2px dashed var(--color-primary);
+  outline-offset: 4px;
+}
