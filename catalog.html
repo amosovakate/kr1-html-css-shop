@@ -13,18 +13,36 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <div class="site-header">
-      <a class="site-logo" href="index.html">ShopProject</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">ShopProject</a>
 
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
-          <li><a href="index.html#advantages">Преимущества</a></li>
-          <li><a href="index.html#popular">Популярные товары</a></li>
-          <li><a href="index.html#contacts">Обратная связь</a></li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html">Главная</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link site-nav__link--active" href="catalog.html" aria-current="page">Каталог</a>
+          </li>
+          <li class="site-nav__item">
+              <a class="site-nav__link" href="product.html">Карточки товаров</a>   
+          </li>
+          <li class="site-nav__item">
+              <a class="site-nav__link" href="order.html">Заявка</a> 
+          </li> 
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="contacts.html">Контакты</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html#advantages">Преимущества</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html#contacts">Обратная связь</a>
+          </li>
         </ul>
       </nav>
     </div>
@@ -84,31 +102,87 @@
         </aside>
 
         <section class="catalog-products">
-            <h2>Список товаров</h2>
+          <h2>Список товаров</h2>
 
-            <div class="products-grid">
-                <article class="product-card">
-                <h3>Товар 1</h3>
-                <p>Краткое описание учебного товара.</p>
-                <p>Цена: 1000 руб.</p>
-                <a class="button" href="index.html#popular">Подробнее</a>
-                </article>
+          <div class="products-grid">
+            
+            <!-- Товар 1: Клавиатура -->
+            <article class="product-card">
+              <span class="product-card__badge product-card__badge--new"></span>
+              <img src="images/pic1.png" alt="Описание" class="product-card__image">
+              <h3 class="product-card__title">Клавиатура</h3>
+              <p class="product-card__description">Механическая клавиатура с подсветкой и тихими переключателями. Идеальна для работы и учебы.</p>
+              <p class="product-card__price">Цена: 3500 руб.</p>
+              <div class="product-card__actions">
+                <a class="button button--primary product-card__link" href="product.html">Подробнее</a>
+              </div>
+            </article>
 
-                <article class="product-card">
-                <h3>Товар 2</h3>
-                <p>Краткое описание учебного товара.</p>
-                <p>Цена: 1500 руб.</p>
-                <a class="button" href="index.html#popular">Подробнее</a>
-                </article>
+            <!-- Товар 2: Мышка -->
+            <article class="product-card">
+              <span class="product-card__badge product-card__badge--new"></span>
+              <img src="images/pic2.png" alt="Описание" class="product-card__image">
+              <h3 class="product-card__title">Мышка</h3>
+              <p class="product-card__description">Беспроводная оптическая мышь с регулировкой чувствительности. Эргономичный корпус.</p>
+              <p class="product-card__price">Цена: 1200 руб.</p>
+              <div class="product-card__actions">
+                <a class="button button--primary product-card__link" href="product.html">Подробнее</a>
+              </div>
+            </article>
 
-                <article class="product-card">
-                <h3>Товар 3</h3>
-                <p>Краткое описание учебного товара.</p>
-                <p>Цена: 2000 руб.</p>
-                <a class="button" href="index.html#popular">Подробнее</a>
-                </article>
-            </div>
-            </section>
+            <!-- Товар 3: Зарядное устройство -->
+            <article class="product-card">
+              <span class="product-card__badge product-card__badge--new"></span>
+              <img src="images/pic3.png" alt="Описание" class="product-card__image">
+              <h3 class="product-card__title">Зарядное устройство</h3>
+              <p class="product-card__description">Компактный блок питания 65 Вт с защитой от перегрева. Подходит для большинства ноутбуков.</p>
+              <p class="product-card__price">Цена: 2800 руб.</p>
+              <div class="product-card__actions">
+                <a class="button button--primary product-card__link" href="product.html">Подробнее</a>
+              </div>
+            </article>
+
+            <!-- Товар: Наушники -->
+            <article class="product-card">
+              <div class="product-card__image-wrapper" style="background-color: #e8eaf6;">
+                <img src="images/pic4.png" alt="Наушники" class="product-card__image">
+              </div>
+              <h3 class="product-card__title">Наушники с микрофоном</h3>
+              <p class="product-card__description">Накладные наушники с шумоподавляющим микрофоном. Подходят для учёбы, звонков и прослушивания музыки.</p>
+              <p class="product-card__price">Цена: 3200 руб.</p>
+              <div class="product-card__actions">
+                <a class="button button--primary product-card__link" href="product.html">Подробнее</a>
+              </div>
+            </article>
+
+            <!-- Товар: Веб-камера -->
+            <article class="product-card">
+              <div class="product-card__image-wrapper" style="background-color: #e0f7fa;">
+                <img src="images/pic5.png" alt="Веб-камера" class="product-card__image">
+              </div>
+              <h3 class="product-card__title">Веб-камера Full HD</h3>
+              <p class="product-card__description">Веб-камера с разрешением 1080p и встроенным микрофоном. Идеальна для онлайн-занятий и видеозвонков.</p>
+              <p class="product-card__price">Цена: 2400 руб.</p>
+              <div class="product-card__actions">
+                <a class="button button--primary product-card__link" href="product.html">Подробнее</a>
+              </div>
+            </article>
+
+            <!-- Товар: Коврик для мыши -->
+            <article class="product-card">
+              <div class="product-card__image-wrapper" style="background-color: #fce4ec;">
+                <img src="images/pic6.png" alt="Коврик для мыши" class="product-card__image">
+              </div>
+              <h3 class="product-card__title">Коврик для мыши</h3>
+              <p class="product-card__description">Большой тканевый коврик с прошитыми краями. Не скользит и защищает стол от царапин.</p>
+              <p class="product-card__price">Цена: 600 руб.</p>
+              <div class="product-card__actions">
+                <a class="button button--primary product-card__link" href="product.html">Подробнее</a>
+              </div>
+            </article>
+
+          </div>
+        </section>
 
     
   </main>
@@ -117,5 +191,7 @@
     <p>&copy; 2026 Учебный проект. Все права защищены.</p>
     <p>Дисциплина: Фронтенд и бэкенд разработка</p>
   </footer>
+    <button class="scroll-top" type="button" aria-label="Наверх">↑</button>
+    <script src="js/scroll-top.js"></script>
 </body>
 </html>
